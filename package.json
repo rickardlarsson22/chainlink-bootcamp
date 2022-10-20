@@ -5,7 +5,7 @@
   "description": "A repo for boilerplate code for testing, deploying, and shipping chainlink solidity code.",
   "scripts": {
     "compile": "hardhat compile",
-    "test": "hardhat test test/unit/*.spec.js",
+    "test": "hardhat test test/unit/PriceConsumerV3.spec.js",
     "test-staging": "hardhat test test/staging/*.spec.js --network goerli",
     "deploy": "hardhat run scripts/deployment/main.js",
     "lint": "solhint 'contracts/*.sol'",
@@ -27,7 +27,8 @@
     "@typechain/hardhat": "^6.1.3",
     "chai": "^4.3.6",
     "ethers": "^5.7.1",
-    "hardhat": "^2.11.2",
+    "hardhat": "^2.12.0",
+    "hardhat-deploy": "^0.11.18",
     "hardhat-gas-reporter": "^1.0.9",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
@@ -39,6 +40,9 @@
     "typechain": "^8.1.0"
   },
   "dependencies": {
+    "@nomiclabs/hardhat-truffle5": "^2.0.7",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
     "dotenv": "^16.0.3"
   },
   "lint-staged": {
